@@ -34,7 +34,7 @@ for i in jobs_element:
 python_jobs = results.find_all('h2', string= lambda text:'python' in text.lower()) # This piece of code find only those jobs which is related to Python Developer
 print(len(python_jobs)) # returns 1
 
-for j in python_jobs:       # To display the link of job.
+for j in python_jobs:       # To display the link of job
     link = j.find('a')['href']  # On the page, links are contained inside <a> tag.
     print(j.text.strip())
     print(f"Apply for this job here:{link}")    # by using F-string, the expressions are replaced with their values jus like % and .format
